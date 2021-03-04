@@ -89,6 +89,4 @@ class GUID {
 		else return $delete;
 	}
 }
-
-$GUID = new GUID;
 ?>

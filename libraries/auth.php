@@ -3,6 +3,7 @@ require_once "connect.php";
 require_once "guid.php";
 require_once "basic.php";
 require_once "errors.php";
+$GUID = new GUID;
 
 class auth{
 	public function signin($table, $login, $password, $cookieLife = false){
@@ -11,11 +12,10 @@ class auth{
 		$login = htmlspecialchars(  filter_var( trim( $login ), FILTER_SANITIZE_STRING ) );
 		$password = htmlspecialchars(  filter_var( trim( $password ), FILTER_SANITIZE_STRING ) );
 
-
 		if ($login == '' || $password == '') return false;
 		$check = $GUID->get($table, "`login` = '$login' AND `password` = '$password'");
 		
-		if ( $cookieLife ) setcookie( 'user-id', $check['id'], time() + $cookieLife, '/');
+		// if ( $cookieLife ) setcookie( 'user-id', $check['id'], time() + $cookieLife, '/');
 
 		if ( $check ) return true;
 		else return false; 
@@ -51,7 +51,7 @@ class auth{
   		if ( preg_match( "/([0-9]+)/", $password ) ) $diffPassword++;
   		if ( preg_match( "/(W+)/", $password ) ) $diffPassword++;
 
-  		if ( $diffPassword < $perProtection ) return $errors->error(503);
+  		if ( $diffPassword <= $perProtection ) return $errors->error(503);
   		else {
   			$columns = explode(',', $columns);
   			$values = explode(',', $values);
@@ -69,4 +69,15 @@ class auth{
 		}
 	}
 }
+//AUTH
+// include auth.php
+// $auth = new auth;
+// $signin = $auth -> signin( 'table name', 'login', 'password', 'cookie life' );
+// $signup = $auth -> signup( 'table name', 'columns', 'values', 'login', 'password', 'permitted protection', 'cookie life' );
+
+$auth = new auth;
+// $signup = $auth -> signup( 'users', 'name', 'Diyorbek', 'Diko@iProger', 'Parol@Password2001', 3);
+// $signin = $auth -> signin( 'users', 'Diko@iProger', 'Parol@Password2001' );
+
+// var_dump($signin);
 ?>
