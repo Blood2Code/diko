@@ -26,7 +26,7 @@ class GUID {
 	}
 		
 	//Method for UPDATE row in data base
-	public function update( $table, $columns = false, $values = false, $condition = false ){
+	public function update( $table, $columns, $values, $condition = false ){
 		global $connect;
 		global $errors;
 

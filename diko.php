@@ -11,11 +11,16 @@ require_once 'libraries/guid.php';
 //Include basics function
 require_once 'libraries/basic.php';
 
-// $insert = $GUID->insert(table, columns, values);
-// $delete = $GUID->delete(table, condition);
 
-// $get = $GUID->get('test', 'id = 1');
-// $basics->print_a($get);
+// $get = $GUID -> get( 'table', 'condition' );
+// $update = $GUID -> update( 'table', 'columns', 'values', 'condition' );
+// $insert = $GUID -> insert( 'table', 'columns', 'values' ); 
+// $delete = $GUID -> delete( 'table', 'condition' );
 
-$get = $GUID->get('test', 'id = 1003');
+
+//AUTH
+// include auth.php
+// $auth = new auth;
+// $signin = $auth -> signin( 'table name', 'login', 'password', 'cookie life' );
+// $signup = $auth -> signup( 'table name', 'columns', 'values', 'login', 'password', 'permitted protection', 'cookie life' );
 ?>
