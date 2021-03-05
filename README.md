@@ -1,5 +1,4 @@
-# diko
-PHP library DIKO  
+# PHP library DIKO  
 GUID (Get, Update, Insert, Delete)  
 
 // $get = $GUID -> get( 'table', 'condition' );  
