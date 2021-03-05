@@ -8,7 +8,7 @@ GUID (Get, Update, Insert, Delete)  <br/>
 // $delete = $GUID -> delete( 'table', 'condition' );<br/>
 
 AUTH
-// include auth.php;
-// $auth = new auth;
-// $signin = $auth -> signin( 'table name', 'login', 'password', 'cookie life' );
-// $signup = $auth -> signup( 'table name', 'columns', 'values', 'login', 'password', 'permitted protection', 'cookie life' );
+// include auth.php;  
+// $auth = new auth;  
+// $signin = $auth -> signin( 'table name', 'login', 'password', 'cookie life' );  
+// $signup = $auth -> signup( 'table name', 'columns', 'values', 'login', 'password', 'permitted protection', 'cookie life' );  
