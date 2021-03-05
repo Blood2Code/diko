@@ -6,7 +6,7 @@ GUID (Get, Update, Insert, Delete)
 // $insert = $GUID -> insert( 'table', 'columns', 'values' );  
 // $delete = $GUID -> delete( 'table', 'condition' );  
 
-AUTH
+AUTH  
 // include auth.php;  
 // $auth = new auth;  
 // $signin = $auth -> signin( 'table name', 'login', 'password', 'cookie life' );  
