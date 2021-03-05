@@ -1,5 +1,5 @@
 # diko
-PHP library DIKO \r\n
+PHP library DIKO <br/>
 GUID (Get, Update, Insert, Delete)
 
 // $get = $GUID -> get( 'table', 'condition' );
