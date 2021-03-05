@@ -1,8 +1,8 @@
 # diko
-PHP library DIKO
-GUID (Get, Update, Insert, Delete)
+PHP library DIKO \n
+GUID (Get, Update, Insert, Delete) \n
 
-// $get = $GUID -> get( 'table', 'condition' );
+// $get = $GUID -> get( 'table', 'condition' ); \n
 // $update = $GUID -> update( 'table', 'columns', 'values', 'condition' );
 // $insert = $GUID -> insert( 'table', 'columns', 'values' ); 
 // $delete = $GUID -> delete( 'table', 'condition' );
