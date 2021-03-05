@@ -15,7 +15,7 @@ class auth{
 		if ($login == '' || $password == '') return false;
 		$check = $GUID->get($table, "`login` = '$login' AND `password` = '$password'");
 		
-		// if ( $cookieLife ) setcookie( 'user-id', $check['id'], time() + $cookieLife, '/');
+		if ( $cookieLife ) setcookie( 'user-id', $check['id'], time() + $cookieLife, '/');
 
 		if ( $check ) return true;
 		else return false; 
@@ -68,6 +68,10 @@ class auth{
   			return $check;
 		}
 	}
+	public function check( $cookieName, $url, $backURL = false ){
+		if ( !isset( $_COOKIE[$cookieName] ) ) redirect( $url, $backURL );
+		else return true;
+	}
 }
 //AUTH
 // include auth.php
@@ -77,7 +81,9 @@ class auth{
 
 $auth = new auth;
 // $signup = $auth -> signup( 'users', 'name', 'Diyorbek', 'Diko@iProger', 'Parol@Password2001', 3);
-// $signin = $auth -> signin( 'users', 'Diko@iProger', 'Parol@Password2001' );
+// $signin = $auth -> signin( 'users', 'Diko@iProger', 'Parol@Password2001', 500 );
 
 // var_dump($signin);
+// $auth->check('id', '/', currentURL(false) );
+echo currentURL(false);
 ?>

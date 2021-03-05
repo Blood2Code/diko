@@ -12,7 +12,16 @@
 		if ( $data ) return $config[ $data ];
 		else return $config;
 	}
-	function login(){
+	function redirect($url, $backURL = false){
+		if ( $backURL ) {
+			$url = $url."?backurl=".base64_encode($backURL);
+		}
+		header("Location: " . $url);
+	}
+	function currentURL($params = true){
+		$url = ( ( !empty($_SERVER['HTTPS'] ) ) ? 'https' : 'http' ) . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		if ( $params === false ) $url = explode('?', $url)[0];
 		
+		return $url;
 	}
 ?>
