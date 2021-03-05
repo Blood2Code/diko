@@ -1,11 +1,11 @@
 # diko
-PHP library DIKO <br/>
-GUID (Get, Update, Insert, Delete)  <br/>
+PHP library DIKO  
+GUID (Get, Update, Insert, Delete)  
 
-// $get = $GUID -> get( 'table', 'condition' );<br/>
-// $update = $GUID -> update( 'table', 'columns', 'values', 'condition' );<br/>
-// $insert = $GUID -> insert( 'table', 'columns', 'values' ); <br/>
-// $delete = $GUID -> delete( 'table', 'condition' );<br/>
+// $get = $GUID -> get( 'table', 'condition' );  
+// $update = $GUID -> update( 'table', 'columns', 'values', 'condition' );  
+// $insert = $GUID -> insert( 'table', 'columns', 'values' );  
+// $delete = $GUID -> delete( 'table', 'condition' );  
 
 AUTH
 // include auth.php;  
